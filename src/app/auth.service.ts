@@ -34,10 +34,8 @@ export class AuthService {
     // to see if the token is expired
 
     if (token) {
-      console.log('token exists');
       return true;
     } else {
-      console.log('no token');
       return false;
     }
   }
