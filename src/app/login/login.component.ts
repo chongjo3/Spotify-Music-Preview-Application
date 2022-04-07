@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   user: { userName: ""; password: ""; _id: ""; } = { userName: "",password: "", _id: "" };
   warning: String = "";
@@ -34,4 +34,10 @@ export class LoginComponent implements OnInit {
         }
       )};
    }
+
+   ngOnDestroy(): void {
+    if (this.loginSub){
+      this.loginSub.unsubscribe();
+    }
+  }
 }
