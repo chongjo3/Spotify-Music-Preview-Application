@@ -1,10 +1,13 @@
 /*********************************************************************************
-* WEB422 – Assignment 05
+* WEB422 – Assignment 06
 * I declare that this assignment is my own work in accordance with Seneca Academic Policy. No part of this
-* assignment has been copied manually or electronically from any other source (including web sites) or 
+* assignment has been copied manually or electronically from any other source (including web sites) or
 * distributed to other students.
-* 
-* Name: Joshua Chong Student ID: 114376205 Date: 3/27/2022
+*
+* Name: Joshua Chong Student ID: 114376205 Date: 4/7/2022
+* Angular App (Deployed) Link: https://benevolent-frangollo-61e19f.netlify.app
+*
+* User API (Heroku) Link: https://shrouded-ocean-86603.herokuapp.com/api/user
 *
 ********************************************************************************/
 import { Component, OnInit } from '@angular/core';
