@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import RegisterUser from '../RegisterUser';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class RegisterComponent implements OnInit, OnDestroy {
 
-  registerUser: { userName: ""; password: ""; password2: ""; } = { userName: "",password: "",password2: "" };
+  registerUser: RegisterUser = { userName: "",password: "",password2: "" };
   warning: String = "";
   success: boolean = false;
   loading: boolean = false;

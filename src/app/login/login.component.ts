@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import User from '../User';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  user: { userName: ""; password: ""; _id: ""; } = { userName: "",password: "", _id: "" };
+  user: User = { userName: "",password: "", _id: "" };
   warning: String = "";
   loading: boolean = false;
   private loginSub: any;
